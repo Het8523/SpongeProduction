@@ -4,3 +4,10 @@
 Web Application Started 
 Name:SpongesProduction
 
+0250 Builded the project and run it
+
+0254: Added sponge.cs file in models
+
+0258: Edited content of SpongeContext.cs
+
+0313: Scaffolding done
