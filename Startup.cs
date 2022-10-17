@@ -27,6 +27,8 @@ namespace SpongeProduction
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<SpongeProductionContext>();
             services.AddControllersWithViews();
+            services.AddDbContext<SpongeProductionContext>(options =>
+   options.UseSqlServer(Configuration.GetConnectionString("SpongeProductionContext")));
 
         }
 

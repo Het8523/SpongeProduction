@@ -15,9 +15,12 @@ namespace SpongeProduction.Models
 
         public string Shape { get; set; }
 
-        public decimal Price { get; set; }
+        
 
         [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
+
+        public decimal Price { get; set; }
     }
 }
+        
