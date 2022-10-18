@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SpongeProduction.Models.Sponge>
+﻿@model SpongeProduction.Models.SpongeShapeViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -9,51 +9,62 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form asp-controller="Sponges" asp-action="Index" method="get">
+    <p>
+        <select asp-for="SpongeShape" asp-items="Model.Shapes">
+            <option value="">All</option>
+        </select>
+        Company: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Company)
+                @Html.DisplayNameFor(model => model.Sponges[0].Company)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Colour)
+                @Html.DisplayNameFor(model => model.Sponges[0].Colour)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Shape)
+                @Html.DisplayNameFor(model => model.Sponges[0].Shape)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Sponges[0].Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
+                @Html.DisplayNameFor(model => model.Sponges[0].ReleaseDate)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Company)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Colour)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Shape)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReleaseDate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Sponges)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Company)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Colour)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Shape)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

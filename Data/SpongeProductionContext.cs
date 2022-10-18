@@ -15,5 +15,6 @@ namespace SpongeProduction.Data
         }
 
         public DbSet<Sponge> Sponge { get; set; }
+        public object Shape { get; internal set; }
     }
 }

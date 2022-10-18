@@ -21,10 +21,34 @@ namespace SpongeProduction.Controllers
         }
 
         // GET: Sponges
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string spongeShape, string searchString)
         {
-            return View(await _context.Sponge.ToListAsync());
+            IQueryable<string> shapeQuery = from m in _context.Sponge
+                                            orderby m.Shape
+                                            select m.Shape;
+
+            var sponges = from m in _context.Sponge
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                sponges = sponges.Where(s => s.Company.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(spongeShape))
+            {
+                sponges = sponges.Where(x => x.Shape == spongeShape);
+            }
+
+            var SpongeShapeVM = new SpongeShapeViewModel
+            {
+                Shapes = new SelectList(await shapeQuery.Distinct().ToListAsync()),
+                Sponges = await sponges.ToListAsync()
+            };
+
+            return View(SpongeShapeVM);
         }
+
 
         // GET: Sponges/Details/5
         public async Task<IActionResult> Details(int? id)
