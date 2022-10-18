@@ -10,10 +10,20 @@ namespace SpongeProduction.Models
     public class Sponge
     {
         public int Id { get; set; }
+
+        [StringLength(60, MinimumLength = 3)]
+        [Required]
         public string Company { get; set; }
 
+
+        [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+        [Required]
+        [StringLength(30)]
         public string Colour { get; set; }
 
+        [RegularExpression(@"^[A-Z]+[a-zA-Z\s]*$")]
+        [Required]
+        [StringLength(30)]
         public string Shape { get; set; }
 
 
@@ -24,6 +34,7 @@ namespace SpongeProduction.Models
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
 
+        [Range (1,5)]
         public int Rating { get; set; }
 
     }
