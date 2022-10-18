@@ -41,6 +41,7 @@ Name:SpongesProduction
 0613:  Checked by running
 
 0616: index.cshtml in Sponges folder
+
 0618: Again checked
 
 0624: Added SpongeShapeViewModel class 
@@ -52,3 +53,12 @@ Name:SpongesProduction
 0634: Took a small nap.......
 
 0728: solved it 
+
+0807: Completed till Part 8 
+
+added rating in the database
+
+Added and Updated migration 
+
+run it successfully.... Hurrraaaayyyy!!!!
+

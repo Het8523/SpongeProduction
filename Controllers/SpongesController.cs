@@ -79,7 +79,7 @@ namespace SpongeProduction.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Company,Colour,Shape,Price,ReleaseDate")] Sponge sponge)
+        public async Task<IActionResult> Create([Bind("Id,Company,Colour,Shape,Price,ReleaseDate,Rating")] Sponge sponge)
         {
             if (ModelState.IsValid)
             {
@@ -111,7 +111,7 @@ namespace SpongeProduction.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Company,Colour,Shape,Price,ReleaseDate")] Sponge sponge)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Company,Colour,Shape,Price,ReleaseDate,Rating")] Sponge sponge)
         {
             if (id != sponge.Id)
             {

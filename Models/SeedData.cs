@@ -27,7 +27,8 @@ namespace SpongeProduction.Models
                         Colour = "Red",
                         Shape ="Circle",
                         ReleaseDate = DateTime.Parse("1979-10-29"),
-                        Price = 3.6M
+                        Price = 3.6M,
+                        Rating = 2
 
                     },
 
@@ -37,7 +38,9 @@ namespace SpongeProduction.Models
                         Colour = "Yellow",
                         Shape = "Star",
                         ReleaseDate = DateTime.Parse("1956-2-08"),
-                        Price = 10M
+                        Price = 10M,
+                        Rating = 5
+
 
                     },
 
@@ -47,7 +50,8 @@ namespace SpongeProduction.Models
                         Colour = "Orange",
                         Shape = "Hettagon",
                         ReleaseDate = DateTime.Parse("1987-03-03"),
-                        Price = 8M
+                        Price = 8M,
+                        Rating = 3
 
                     },
 
@@ -57,7 +61,8 @@ namespace SpongeProduction.Models
                         Colour = "Black",
                         Shape = "Hexagon",
                         ReleaseDate = DateTime.Parse("1975-06-18"),
-                        Price = 5.8M
+                        Price = 5.8M,
+                        Rating = 5
 
                     },
 
@@ -67,7 +72,8 @@ namespace SpongeProduction.Models
                         Colour = "Pink",
                         Shape = "Square",
                         ReleaseDate = DateTime.Parse("1945-3-18"),
-                        Price = 6.7M
+                        Price = 6.7M,
+                        Rating = 2
 
                     },
 
@@ -77,7 +83,8 @@ namespace SpongeProduction.Models
                         Colour = "Green",
                         Shape = "Random",
                         ReleaseDate = DateTime.Parse("1959-12-22"),
-                        Price = 10.2M
+                        Price = 10.2M,
+                        Rating = 4
 
                     },
 
@@ -87,7 +94,8 @@ namespace SpongeProduction.Models
                         Colour = "Brown",
                         Shape = "Half Circle",
                         ReleaseDate = DateTime.Parse("1999-11-16"),
-                        Price = 5.34M
+                        Price = 5.34M,
+                        Rating = 5
 
                     },
 
@@ -97,7 +105,8 @@ namespace SpongeProduction.Models
                         Colour = "Purple",
                         Shape = "Pantagon",
                         ReleaseDate = DateTime.Parse("1990-04-25"),
-                        Price = 6.09M
+                        Price = 6.09M,
+                        Rating = 4
 
                     },
 
@@ -107,7 +116,8 @@ namespace SpongeProduction.Models
                         Colour = "Maroon",
                         Shape = "Tringle",
                         ReleaseDate = DateTime.Parse("1950-09-18"),
-                        Price = 7.8M
+                        Price = 7.8M,
+                        Rating = 3
 
                     },
 
@@ -117,7 +127,8 @@ namespace SpongeProduction.Models
                         Colour = "Blue",
                         Shape = "Oval",
                         ReleaseDate = DateTime.Parse("1960-07-13"),
-                        Price = 2M
+                        Price = 2M,
+                        Rating = 4
 
                     }
                 );
