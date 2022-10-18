@@ -119,7 +119,7 @@ namespace SpongeProduction.Models
                         ReleaseDate = DateTime.Parse("1960-07-13"),
                         Price = 2M
 
-                    },
+                    }
                 );
                 context.SaveChanges();
             }
