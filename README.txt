@@ -21,3 +21,11 @@ Name:SpongesProduction
 0426: Break time
 
 0515: Added content in Seeddata
+
+0518: Added data notation in sponge.cs
+
+0525: Examined edit.cshtml file
+
+0536: Run the application and tested by inputing invalid data
+
+0538: Controller actionn and views completed
